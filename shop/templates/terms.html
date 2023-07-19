@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShoppingGPT</title>
+  <!-- Include Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Include jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r125/three.min.js"></script>
+  <script>
+    // Load navbar.html into the designated container
+    $(function() {
+      $("#navbarContainer").load("navbar.html");
+      $("#footerContainer").load("footer.html");
+    });
+  </script>
+</head>
+<body class="container-fluid flex flex-col min-h-screen">
+
+    <div id="navbarContainer">
+    {% include "navbar.html" %}
+    </div>
+    <main class="animate__animated animate__fadeIn animate__slow container mx-auto p-4 mt-12 bg-white flex flex-col items-center justify-center text-gray-700 mt-28 py-12 rounded-lg">
+      <h1 class="text-3xl font-bold mb-6">TERMS OF USE AND PAYMENT AGREEMENT</h1>
+
+      <p class="mb-6">This Terms of Use and Payment Agreement (the "Agreement") is a legally binding contract between you ("User") and Shopping GPT ("ShoppingGPT," "we," or "us"). By accessing or using the Shopping GPT   ("App","our app","platform","system"), you acknowledge that you have read, understood, and agreed to be bound by this Agreement. If you do not agree to these terms, please refrain from using Shopping GPT.</p>
+
+      <h2 class="text-2xl font-bold mt-8">1. USE OF SHOPPING GPT</h2>
+      <ul class="list-disc ml-6">
+        <li class="mb-2">1.1 Eligibility: By using the App, the User represents and warrants that they are at least 14 years old or possess the legal capacity to enter into this Agreement.</li>
+        <li class="mb-2">1.2 Account Creation: Certain features of the App may require the creation of an account. The User is responsible for maintaining the confidentiality of their account credentials and for all activities occurring under their account.</li>
+        <li class="mb-2">1.3 We must not have previously disabled your account for violation of law or any of our policies.</li>
+        <li class="mb-2">1.4 Acceptable Use: The User agrees to use the App in compliance with all applicable laws and regulations. Any unlawful or unauthorized use of the App, infringement upon the rights of others, or activity that may harm or disrupt the App or its users is strictly prohibited.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8">2. INTELLECTUAL PROPERTY</h2>
+      <ul class="list-disc ml-6">
+        <li class="mb-2">2.1 Ownership: The App and its associated content, including logos, trademarks, text, graphics, and software, are owned or licensed by ShoppingGPT and are protected by intellectual property laws. No part of the App may be used or reproduced without prior written consent from ShoppingGPT.</li>
+        <li class="mb-2">2.2 User Content: By using the App, the User may have the opportunity to submit or contribute user-generated content. The User grants ShoppingGPT a non-exclusive, worldwide, royalty-free, transferable license to use, modify, reproduce, distribute, and display the User's content in connection with the operation and promotion of the App.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8">3. PAYMENT TERMS</h2>
+      <ul class="list-disc ml-6">
+        <li class="mb-2">3.1 Instant Pass Purchase and ShoppingGPT Token Credits: Users who purchase the Instant Pass acknowledge that the amount paid will be converted into ShoppingGPT Token Credits. These credits, along with any existing offers, will be added to the User's total ShoppingGPT Token Credits. This payment grants immediate access to the App and any new features introduced in the future, as long as the User maintains valid positive ShoppingGPT tokens and a valid VIP PASS. After the initial payment, users will also be billed in a post-paid method for subsequent usage, similar to section 3.2 below.</li>
+        <li class="mb-2">3.2 Post-Paid Method for Users without VIP PASS: Users without a VIP PASS will also utilize a post-paid method for their payments. They will be billed for their credits after an initial minimum deposit required by the system on the day of their payment. This payment method allows users to access and utilize ShoppingGPT without the Instant Pass but still enjoy the benefits and services offered. Subsequent payments will be billed post-paid, similar to users with the Instant Pass.</li>
+        <li class="mb-2">3.3 Refund Policy: Refunds may be initiated under certain conditions. A total refund can only be issued if the User has not spent any tokens from their purchase. If tokens have been spent, only a partial refund can be initiated. The exact refundable amount will be calculated and displayed on the User's dashboard. All refunds may be subject to a fee percentage or a flat amount, covering the associated transaction costs, which will be clearly displayed on the User's dashboard.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8">4. MODIFICATION AND TERMINATION</h2>
+      <p class="mb-6">ShoppingGPT reserves the right to modify, suspend, or terminate the App or any part thereof at any time without prior notice. ShoppingGPT may also modify this Agreement periodically, and it is the User's responsibility to review the terms for any updates. Continued use of the App after modifications signifies the User's acceptance of the updated Agreement.</p>
+
+      <h2 class="text-2xl font-bold mt-8">5. GOVERNING LAW AND JURISDICTION</h2>
+      <p class="mb-6">This Agreement shall be governed by and construed in accordance with the laws of [Jurisdiction]. Any disputes arising from or relating to this Agreement or the use of the App shall be subject to the exclusive jurisdiction of the courts in [Jurisdiction].</p>
+
+
+  <h2 class="text-2xl font-bold mt-8">6. Identity Accuracy and Non-Impersonation</h2>
+  <ul class="list-disc ml-6">
+    <li class="mb-2">6.1 Accurate Information: At Shopping GPT, we prioritize accurate information. While we respect your privacy and allow you to remain anonymous, it is crucial to provide us with precise and up-to-date information during registration, including any required personal data. You may not impersonate individuals, entities, or anything that you are not. Creating an account for someone else is strictly prohibited unless you have obtained explicit permission.</li>
+  </ul>
+
+  <h2 class="text-2xl font-bold mt-8">8. Lawful and Ethical Use</h2>
+  <ul class="list-disc ml-6">
+    <li class="mb-2">8.1 Compliance: Shopping GPT is dedicated to maintaining a lawful and ethical platform. You must adhere to these Terms and our policies, including the Shopping GPT Community Guidelines and Developer Policies. Engaging in activities that are unlawful, misleading, fraudulent, or unauthorized is strictly prohibited. We encourage you to report any conduct or content that violates these guidelines using our designated channels.</li>
+  </ul>
+
+  <h2 class="text-2xl font-bold mt-8">9. Preservation of Service Integrity</h2>
+  <ul class="list-disc ml-6">
+    <li class="mb-2">9.1 Uninterrupted Service: Shopping GPT relies on the proper functioning of our platform. Any interference or impairment of the intended operation is strictly prohibited. This includes misusing our reporting, dispute, or appeals channels, such as submitting fraudulent or baseless reports or appeals.</li>
+  </ul>
+
+  <h2 class="text-2xl font-bold mt-8">10. Authorized Access and Information Collection</h2>
+  <ul class="list-disc ml-6">
+    <li class="mb-2">10.1 Authorized Usage: Unauthorized creation of accounts, unauthorized access, or unauthorized collection of information is strictly prohibited on Shopping GPT. This includes any attempts to automate account creation or information collection without our explicit permission.</li>
+  </ul>
+
+  <h2 class="text-2xl font-bold mt-8">11. Prohibited Sale, Licensing, and Data Acquisition</h2>
+  <ul class="list-disc ml-6">
+    <li class="mb-2">11.1 Account and Data Transactions: On Shopping GPT, you are not permitted to sell, license, or purchase any account or data obtained from our platform. This includes any attempts to buy, sell, or transfer aspects of your account, such as your username. Soliciting, collecting, or using login credentials or badges of other users, as well as requesting or collecting Shopping GPT usernames, passwords, or misappropriating access tokens, is strictly forbidden.</li>
+  </ul>
+
+  <h2 class="text-2xl font-bold mt-8">12. Unauthorized Modification and Usage</h2>
+  <ul class="list-disc ml-6">
+    <li class="mb-2">12.1 Product Integrity: Unauthorized modification, translation, creation of derivative works, or reverse-engineering of Shopping GPT's products or their components is strictly prohibited without our explicit authorization.</li>
+  </ul>
+
+  <h2 class="text-2xl font-bold mt-8">13. Consent for Username Usage</h2>
+  <ul class="list-disc ml-6">
+    <li class="mb-2">13.1 Username Restrictions: You may not use a domain name or URL in your username on Shopping GPT without obtaining our prior written consent.</li>
+  </ul>
+
+  <h2 class="text-2xl font-bold mt-8">14. CONTACT US</h2>
+  <p class="mb-6">For any inquiries, concerns, or feedback regarding this Agreement, the App, or payments, please contact our customer support team at <a href="mailto:email@example.com">email@example.com</a>. We are committed to addressing your inquiries promptly and ensuring a smooth payment experience for all ShoppingGPT users.</p>
+
+      <p>Last Updated: 15.07.2023</p>
+
+      <p class="mt-8">By using the App and making payments through the platform, you acknowledge that you have read, understood, and agreed to the terms outlined in this Agreement.</p>
+    </main>
+
+
+
+  <div id="footerContainer">
+    {% include "footer.html" %}
+  </div>
+</body>
+</html>

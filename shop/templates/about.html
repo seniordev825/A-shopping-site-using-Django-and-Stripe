@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShoppingGPT</title>
+  <!-- Include Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Include jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r125/three.min.js"></script>
+  <script>
+    // Load navbar.html into the designated container
+    $(function() {
+      $("#navbarContainer").load("navbar.html");
+      $("#footerContainer").load("footer.html");
+    });
+  </script>
+</head>
+<body class="container-fluid flex flex-col min-h-screen">
+  <!-- Your landing page content goes here -->
+
+
+  <div id="navbarContainer">
+   {% include "navbar.html" %}
+  </div>
+
+    <!-- Add your additional HTML elements and Tailwind classes as needed -->
+    <section>
+      <div class="feature-1 py-6 md:py-12">
+          <div class="container px-4 mx-auto">
+            <div class="flex -mx-4 mt-8">
+              <div class="px-4 text-center md:w-10/12 xl:w-8/12 mx-auto">
+                <h1 class="mb-4 text-4xl font-bold animate__animated animate__slow animate__slideInDown text-sky-950">We Revolutionize Your Shopping Experience</h1>
+                <h3 class="mb-4 text-xl font-medium animate__animated animate__slow animate__slideInDown">Smart, Personalized, Effortless</h3>
+                <p class="mb-4 text-xl mt-12 animate__animated animate__slow animate__fadeInUp animate__delay-1s">Experience the ultimate shopping revolution with ShoppingGPT. Smart, personalized, and effortless, it supercharges your shopping journey. Save time and money as our advanced AI finds tailored deals just for you.
+                  <br/><br/>Say goodbye to endless browsing and hello to a curated experience that surpasses expectations. Discover perfect products with ease and confidence. ShoppingGPT: Unleash the power of stunning shopping.</p>
+              </div>
+            </div>
+
+            <div class="md:flex md:-mx-4 mt-12 md:pt-4">
+              <div class="px-4 md:w-1/3 mt-6 md:mt-0  animate__animated animate__slow animate__fadeInLeft animate__delay-1s">
+                <div class="feature-box text-center p-4 md:p-6 max-w-sm mx-auto border-2 border-solid border-gray-300 rounded md:h-full">
+                  <div class="text-xl p-4 w-16 h-16 mx-auto">
+                    <i class="fas fa-bolt text-sky-950"></i>
+                  </div>
+                  <h5 class="text-xl font-medium mb-4">Vision</h5>
+                  <p class="text-gray-600 mb-3">Empowering Smarter Shopping
+                  <br/><br/> To simplify the shopping process, personalize recommendations, and excel in delivering unparalleled value to our users.
+                </p>
+                </div>
+              </div>
+              <div class="px-4 md:w-1/3 mt-6 md:mt-0 animate__animated animate__slow animate__fadeInLeft animate__delay-2s">
+                <div class="feature-box text-center p-4 md:p-6 max-w-sm mx-auto border-2 border-solid border-gray-300 rounded md:h-full">
+                  <div class="text-xl p-4 w-16 h-16 mx-auto">
+                    <i class="fas fa-rocket text-sky-950"></i>
+                  </div>
+                  <h5 class="text-xl font-medium mb-4">Mission</h5>
+                  <p class="text-gray-600 mb-3">Revolutionize the Way We Shop.
+                  <br/><br/>
+                Revolutionizing the shopping experience through advanced AI technology, enhancing convenience and personalization.
+              </p>
+                </div>
+              </div>
+              <div class="px-4 md:w-1/3 mt-6 md:mt-0 animate__animated animate__slow animate__fadeInLeft animate__delay-3s">
+                <div class="feature-box text-center p-4 md:p-6 max-w-sm mx-auto border-2 border-solid border-gray-300 rounded md:h-full">
+                  <div class="text-xl p-4 w-16 h-16 mx-auto">
+                    <i class="fas fa-recycle text-sky-950"></i>
+                  </div>
+                  <h5 class="text-xl font-medium mb-4">Goal</h5>
+                  <p class="text-gray-600 mb-3">Reinventing Shopping Paradigm
+                  <br/><br/>
+                  To reinvent the shopping paradigm by providing an intelligent platform that saves time, enhances decision-making, and maximizes value for users.
+                </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+
+    <section>
+      <div class="max-w-screen-md mx-auto p-5 animate__animated animate__slow animate__fadeInUp">
+          <div class="text-center mb-16">
+            <p class="mt-4 text-sm leading-7 text-gray-500 font-regular uppercase">
+              Ready to Connect with Us?
+              </p>
+              <h3 class="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight text-gray-900">
+                Get In <span class="text-sky-950">Touch</span>
+              </h3>
+          </div>
+
+          <form class="w-full">
+          <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                First Name
+              </label>
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="">
+              <p class="text-red-500 text-xs italic">Please fill out this field.</p>
+            </div>
+            <div class="w-full md:w-1/2 px-3">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                Last Name
+              </label>
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="">
+            </div>
+          </div>
+          <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full px-3">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                Email Address
+              </label>
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-email" type="email" placeholder="********@*****.**">
+            </div>
+          </div>
+
+            <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full px-3">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                Your Message
+              </label>
+              <textarea rows="10" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3
+              leading-tight focus:outline-none focus:bg-white focus:border-gray-500"></textarea>
+            </div>
+            <div class="flex justify-between w-full px-3">
+
+              <button class="shadow focus:shadow-outline focus:outline-none text-white font-bold py-2 px-6 rounded
+              dark:bg-gradient-to-r from-sky-950 to-sky-800 dark:hover:from-sky-600 dark:hover:to-indigo-600" type="submit">
+                Send Message
+              </button>
+            </div>
+
+          </div>
+
+        </form>
+        </div>
+    </section>
+
+
+      <div class="mt-auto">
+          <div id="footerContainer" class="text-white py-4">
+            <!-- Your footer content goes here -->
+            {% include "footer.html" %}
+          </div>
+      </div>
+
+      <!-- CALL TO ACTION  -->
+      <!-- THIS IS THE COMPARAISON JS -->
+  <script>
+  $(window).scroll(function() {
+    var scrollPosition = $(window).scrollTop();
+    var img_feature_1 = $('.phone_animation_onScroll').offset().top;
+    var img_feature_2 = $('.phone_animation_onScroll1').offset().top;
+    var windowHeight = $(window).height();
+
+    if (scrollPosition > (img_feature_1 - windowHeight + 100)) {
+      $('.phone_animation_onScroll').addClass('animate__jackInTheBox');
+    }
+    if (scrollPosition > (img_feature_2 - windowHeight + 100)) {
+      $('.phone_animation_onScroll1').addClass('animate__backInUp');
+    }
+  });
+     function moveDivisor(number) {
+             var divisor = $(".divisor_"+number);
+             var  slider = $(".slider_"+number);
+            divisor.css("width", slider.val() + "%");
+      }
+
+    $(document).ready(function() {
+          var divisor = $(".divisor");
+          var  slider = $(".slider");
+
+           // slider.on("input", function() {
+           //   divisor.css("width", $(this).val() + "%");
+           // });
+      });
+
+      ScrollReveal({
+        reset: true,
+        delay: 200,
+        duration: 1000,
+        easing:'ease-in-out'  }).reveal('.scrollReveal');
+
+        ScrollReveal({
+          reset: true,
+          delay: 800,
+          duration: 2000,
+          easing:'ease-in-out' }).reveal('.scrollReveal1');
+      //no repeat
+      ScrollReveal({
+      delay: 200,
+      duration: 1500,
+      easing:'ease-in-out'  }).reveal('.scrollReveal');
+
+      ScrollReveal({
+        delay: 800,
+        duration: 2000,
+        easing:'ease-in-out' }).reveal('.scrollReveal1');
+  </script>
+
+  <script type="text/javascript">
+    const particleWave = () => {
+      const heroBanner = document.querySelector(".hero-banner");
+      let w = heroBanner.clientWidth;
+      let h = heroBanner.clientHeight;
+      const dpr = window.devicePixelRatio;
+
+      const fov = 60;
+      const fovRad = fov * (Math.PI / 180);
+      const dist = h / 2 / Math.tan(fovRad);
+
+      const clock = new THREE.Clock();
+      const pointSize = 4 * dpr;
+
+      const renderer = new THREE.WebGLRenderer();
+      renderer.setSize(w, h);
+      renderer.setClearColor(new THREE.Color("#fff"), 1.0);
+      renderer.setPixelRatio(dpr);
+
+      const container = document.getElementById("webgl-canvas");
+      container.appendChild(renderer.domElement);
+
+      const camera = new THREE.PerspectiveCamera(fov, w / h, 1, dist * 8);
+      camera.position.x = 0;
+      camera.position.y = 20;
+      camera.position.z = 150;
+
+      const scene = new THREE.Scene();
+
+      // TODO: This fog isn't working for some reason
+      const fogColor = "#fff"; // white
+      const near = 1.8;
+      const far = 4;
+      scene.fog = new THREE.Fog(fogColor, near, far);
+      scene.background = new THREE.Color(fogColor);
+
+      const geo = new THREE.BufferGeometry();
+      const positions = [];
+
+      const width = 600 * (w / h);
+      const depth = 150;
+      const distance = 5;
+
+      for (let x = 0; x < width; x += distance) {
+        for (let z = 0; z < depth; z += distance) {
+          positions.push(-width / 2 + x, -60, -depth / 2 + z);
+        }
+      }
+      const positionAttribute = new THREE.Float32BufferAttribute(positions, 3);
+      geo.setAttribute("position", positionAttribute);
+
+      const mat = new THREE.ShaderMaterial({
+        uniforms: {
+          u_time: {
+            value: 0.0
+          },
+          color1: {
+            value: new THREE.Color("#a4c1b9")
+          },
+          color2: {
+            value: new THREE.Color("#a099b0")
+          },
+          color3: {
+            value: new THREE.Color("#0d4f98")
+          },
+          color4: {
+            value: new THREE.Color("#6a569c")
+          },
+          color5: {
+            value: new THREE.Color("#66d0b6")
+          },
+          resolution: { type: "v2", value: new THREE.Vector2(w * dpr, h * dpr) },
+          pointSize: { value: pointSize }
+        },
+        vertexShader: `
+            precision highp float;
+            #define M_PI 3.1415926535897932384626433832795
+
+            uniform float u_time;
+            uniform float pointSize;
+
+            void main() {
+              vec3 p = position;
+              p.y += (
+                 cos(p.x / M_PI * 8.0 + u_time * 1.5) * 15.0 +
+                 sin(p.z / M_PI * 8.0 + u_time * 1.5) * 15.0 +
+                 60.0
+               ) ;
+
+              gl_PointSize = pointSize;
+              gl_Position = projectionMatrix * modelViewMatrix * vec4(p, 1.0);
+            }
+
+        `,
+        fragmentShader: `
+            precision highp float;
+
+            uniform vec3 color1;
+            uniform vec3 color2;
+            uniform vec3 color3;
+            uniform vec3 color4;
+            uniform vec3 color5;
+            uniform vec2 resolution;
+
+            void main() {
+              // create circles instead of squares
+              if ( length( gl_PointCoord - vec2( 0.5, 0.5 ) ) > 0.475 ) discard;
+
+              float x = gl_FragCoord.x;
+              float step1 = 0.25;
+              float step2 = 0.45;
+              float step3 = 0.55;
+              float step4 = 0.75;
+              float step5 = 1.00;
+
+              float mixValue = x / resolution.x;
+
+              // create color stops using 'mix', and convert the progress through each 'step'
+              // to a value between 0 and 1
+              vec3 mixedColor;
+              if(mixValue < step1) {
+                mixedColor = mix(color1, color2, mixValue / step1);
+              } else if (mixValue >= step1 && mixValue < step2) {
+                mixedColor = mix(color2, color3, ((mixValue - step1) / (step2 - step1)));
+              } else if (mixValue >= step2 && mixValue < step3) {
+                mixedColor = color3;
+              } else if (mixValue >= step3 && mixValue < step4) {
+                mixedColor = mix(color3, color4, ((mixValue - step3) / (step4 - step3)));
+              } else {
+                mixedColor = mix(color4, color5, ((mixValue - step4) / (step5 - step4)));
+              }
+
+              gl_FragColor = vec4(mixedColor, 1.0);
+            }
+        `
+      });
+
+      const mesh = new THREE.Points(geo, mat);
+      scene.add(mesh);
+
+      function render() {
+        const time = clock.getElapsedTime();
+        mesh.material.uniforms.u_time.value = time;
+        renderer.render(scene, camera);
+        requestAnimationFrame(render);
+      }
+      render();
+
+      function onWindowResize() {
+        w = heroBanner.clientWidth;
+        h = heroBanner.clientHeight;
+        camera.aspect = w / h;
+        camera.updateProjectionMatrix();
+        renderer.setSize(w, h);
+      }
+      window.addEventListener("resize", onWindowResize);
+    };
+
+    window.addEventListener("load", particleWave);
+
+  </script>
+</body>
+</html>
