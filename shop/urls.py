@@ -9,4 +9,7 @@ urlpatterns = [
     path('about/',views.about, name="about"),
     path('product/', views.product, name="product"),
     path('terms/', views.terms, name="terms"),
+    path('checkout/', views.checkout, name="checkout"),
+    path('get/', views.stripe_webhook, name="get")
+  
 ]

@@ -1,0 +1,97 @@
+<html>
+</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<script src="https://cdn.tailwindcss.com"></script>
+<form  method="POST" class="max-w-sm mx-auto">
+    {% csrf_token %}
+    <div class="text-2xl text-purple-700 font-bold">checkout</div>
+    {{ form.as_p }}
+    {% for error in form.username.errors %}
+    <p class="error">{{ error }}</p>
+{% endfor %}
+{{subform}}
+    <div class="mb-4">
+        <label for="cardholder-name" class="block text-gray-700 text-sm font-bold mb-2">Cardholder Name</label>
+        <input id="cardholder-name" type="text" name="cardholder_name" placeholder="Cardholder Name" required
+               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+    </div>
+
+    <div class="mb-4">
+        <label for="card-element" class="block text-gray-700 text-sm font-bold mb-2">Card Details</label>
+        <div id="card-element" class="border rounded p-2"></div>
+    </div>
+    
+    <button type="submit" class="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+        Pay
+    </button>
+    <div id="card-errors" role="alert" class="text-red-500 mt-2"></div>
+</form>
+{% if form.errors %}
+  <div class="error-message">
+    <ul>
+      {% for field_errors in form.errors.values %}
+        {% for error in field_errors %}
+          <li>{{ error }}</li>
+        {% endfor %}
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var stripe = Stripe("{{ stripe_public_key }}");
+        var elements = stripe.elements();
+        var cardElement = elements.create("card");
+        cardElement.mount("#card-element");
+        var cardErrors = document.getElementById("card-errors");
+
+        cardElement.addEventListener("change", function (event) {
+            if (event.error) {
+                cardErrors.textContent = event.error.message;
+            } else {
+                cardErrors.textContent = "";
+            }
+        });
+
+        var form = document.querySelector("form");
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            stripe.createToken(cardElement).then(function (result) {
+                if (result.error) {
+                    cardErrors.textContent = result.error.message;
+                } else {
+                    var token=result.token;
+                    var card=token.card
+                    var cardNumber = card.last4;
+                    var expMonth = card.exp_month;
+                    var expYear = card.exp_year;
+                    var cvc = card.cvc;
+                    console.log(cvc)
+                    var cardModel = {
+                        cardNumber: cardNumber,
+                        expMonth: expMonth,
+                        expYear: expYear,
+                        cvc: cvc
+                      };
+                
+                      // Convert cardModel to JSON and assign it to a hidden input field
+                    var cardModelJson = JSON.stringify(cardModel);
+                    var cardModelInput = document.createElement('input');
+                    cardModelInput.type = 'hidden';
+                    cardModelInput.name = 'card_model';
+                    cardModelInput.value = cardModelJson;
+                    form.appendChild(cardModelInput);
+                    var tokenInput = document.createElement("input");
+                    tokenInput.type = "hidden";
+                    tokenInput.name = "stripeToken";
+                    tokenInput.value = result.token.id;
+                    form.appendChild(tokenInput);
+                    form.submit();
+                }
+            });
+        });
+    });
+</script>
+</html>

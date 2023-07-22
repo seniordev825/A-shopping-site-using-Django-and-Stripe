@@ -58,12 +58,12 @@
           </div>
 
           <div class="w-10/12 sm:w-8/12 md:w-6/12 lg:w-5/12 xl:w-4/12 mb-6 animate__animated animate__fadeInUp animate__slow">
-            <form action="" method="POST">
+            <form method="POST">
+              {% csrf_token %}
             <div class="bg-white p-4 rounded-lg">
               <div class="relative bg-inherit">
-                  <input type="text" id="username" name="email"
-                   class="peer bg-transparent h-10 w-full rounded-lg text-gray-200 placeholder-transparent ring-2 px-2
-                   ring-gray-500 focus:ring-sky-600 focus:outline-none focus:border-rose-600" placeholder="E-mail"/>
+                {{form.email}}
+                  
                    <label for="username"
                     class="absolute cursor-text left-0 -top-3 text-sm text-gray-500 bg-inherit mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500
                     peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-sky-600 peer-focus:text-sm transition-all">E-mail</label>
@@ -72,9 +72,7 @@
 
             <div class="bg-white border-green-600 p-4 rounded-lg">
               <div class="relative bg-inherit">
-                  <input type="password" id="password" name="repeatpassword"
-                   class="peer bg-transparent h-10 w-full rounded-lg text-gray-200 placeholder-transparent ring-2 px-2
-                   ring-gray-500 focus:ring-sky-600 focus:outline-none focus:border-rose-600" placeholder="Password"/>
+                {{form.repeatpassword}}
                    <label for="password"
                     class="absolute cursor-text left-0 -top-3 text-sm text-gray-500 bg-inherit mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500
                     peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-sky-600 peer-focus:text-sm transition-all">Repeat Password</label>

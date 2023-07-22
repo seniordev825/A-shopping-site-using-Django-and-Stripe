@@ -25,8 +25,10 @@ SECRET_KEY = 'django-insecure-bi$8+lzb5w5p9)5ldm_wx%-2%l1m3t^0qeuapocb%odhhwc=oa
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
+STRIPE_SECRET_KEY='sk_test_51NWAEyKlCBVFSbNHgnaGSLTHTkuN51HyWqwXrKjLODu1wMMNr8bOMQOBSPZK3DpifORowOeTKjwdvq4EbrYOLmzi00TKkvRapy'
+STRIPE_PUBLIC_KEY='pk_test_51NWAEyKlCBVFSbNHDfvMUwSJfnfTZfYOFgyNwpafSySls3oHdDXMw9wOgjwLaLjOLe9OLpxJCsj32fzcsN7vMSSQ00HcZO1VoV'
 
 # Application definition
 
@@ -37,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'shop'
+    'shop',
+    'blog'
 ]
 
 MIDDLEWARE = [
